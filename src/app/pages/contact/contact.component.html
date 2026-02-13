@@ -1,0 +1,91 @@
+<section class="page-banner">
+  <h1>Contact Us</h1>
+  <p>We’d love to hear from you. Get in touch today.</p>
+</section>
+
+<section class="contact-section">
+  <div class="contact-container">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Get In Touch</h2>
+
+      <div class="info-item">
+        <i class="fas fa-phone"></i>
+        <p>+91 7517355137</p>
+      </div>
+
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <p>saurabhshinde4124@gmail.com</p>
+      </div>
+
+      <div class="info-item">
+        <i class="fas fa-briefcase"></i>
+        <p>5+ Years of Experience</p>
+      </div>
+
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Office Address Here</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <input type="text" formControlName="name" placeholder="Full Name">
+          <small *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+            Name is required
+          </small>
+        </div>
+
+        <div class="form-group">
+          <input type="email" formControlName="email" placeholder="Email Address">
+          <small *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+            Valid email is required
+          </small>
+        </div>
+
+       <div class="form-group">
+  <input type="text" formControlName="phone" placeholder="Phone Number">
+
+  <!-- Error messages -->
+  <div class="error-message"
+       *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid">
+
+    <small *ngIf="contactForm.get('phone')?.errors?.['required']">
+      Phone number is required
+    </small>
+
+    <small *ngIf="contactForm.get('phone')?.errors?.['pattern']">
+      Enter valid 10 digit phone number
+    </small>
+
+  </div>
+</div>
+
+        <div class="form-group">
+          <textarea rows="5" formControlName="message" placeholder="Your Message"></textarea>
+          <small *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+            Message is required
+          </small>
+        </div>
+
+        <button type="submit" [disabled]="contactForm.invalid">
+          Send Message
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+
+<!-- Google Map -->
+<div class="contact-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d471.378024467893!2d74.70356763686635!3d19.06267377259092!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcb127393f4db7%3A0x965ff75bbe6f9cad!2sManasi%20Beauty%20Parlour!5e0!3m2!1sen!2sin!4v1770892024737!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+
+</section>

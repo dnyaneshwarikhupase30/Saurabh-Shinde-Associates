@@ -1,0 +1,269 @@
+/* ================= HERO ================= */
+
+.hero {
+
+  height: 100vh;
+
+  background: url("/assets/intro.jpg") center/cover no-repeat;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+
+}
+
+.hero-overlay {
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(10, 31, 68, 0.85),
+    rgba(30, 144, 255, 0.6)
+  );
+
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.tagline {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #e0e7ff;
+}
+
+.hero-desc {
+  font-size: 17px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background: white;
+  color: #1e90ff;
+}
+
+.primary:hover {
+  transform: translateY(-4px);
+}
+
+.secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary:hover {
+  background: white;
+  color: #1e90ff;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services-preview {
+  padding: 100px 20px;
+  text-align: center;
+  background: #f8fbff;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #0a1f44;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 35px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #1e90ff;
+  margin-bottom: 10px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-preview {
+  padding: 100px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.about-btn {
+  padding: 12px 25px;
+  background: #1e90ff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  transform: translateY(-3px);
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+
+/* ================= CTA ================= */
+
+.contact-cta {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0a1f44, #1e90ff);
+  text-align: center;
+  color: white;
+}
+
+.cta-btn {
+  padding: 14px 30px;
+  background: white;
+  color: #1e90ff;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+.fade-up { animation: fadeUp 1s ease; }
+.fade-left { animation: fadeLeft 1s ease; }
+.fade-right { animation: fadeRight 1s ease; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .hero h1 { font-size: 32px; }
+  .tagline { font-size: 18px; }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .hero {
+    height: auto;
+    padding: 100px 20px;
+  }
+
+}

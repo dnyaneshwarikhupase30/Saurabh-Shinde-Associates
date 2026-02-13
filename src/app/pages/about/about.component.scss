@@ -1,0 +1,342 @@
+/* ================= HERO ================= */
+
+.about-hero {
+
+  padding: 120px 20px;
+
+  text-align: center;
+
+  background: linear-gradient(135deg, #0a1f44, #1e90ff);
+
+  color: white;
+
+  animation: fadeIn 1s ease;
+
+}
+
+.about-hero h1 {
+
+  font-size: 44px;
+
+  margin-bottom: 15px;
+
+  animation: fadeUp 1s ease;
+
+}
+
+.about-hero p {
+
+  font-size: 18px;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  opacity: 0.9;
+
+  animation: fadeUp 1.3s ease;
+
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.about-content {
+
+  padding: 80px 20px;
+
+  text-align: center;   /* ✅ Full content center */
+
+}
+
+.about-block {
+
+  margin-bottom: 70px;
+
+}
+
+.about-content h2 {
+
+  font-size: 32px;
+
+  margin-bottom: 15px;
+
+  color: #0a1f44;
+
+  position: relative;
+
+  display: inline-block;   /* Required for center underline */
+
+}
+
+.about-content h2::after {
+
+  content: "";
+
+  width: 70px;
+
+  height: 4px;
+
+  background: #1e90ff;
+
+  display: block;
+
+  margin: 8px auto 0;   /* ✅ underline center */
+
+  border-radius: 5px;
+
+}
+
+.about-content p {
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: #555;
+
+  max-width: 850px;
+
+  margin: 0 auto;   /* ✅ paragraph center block */
+
+}
+
+
+/* ================= GRID ================= */
+
+.about-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 30px;
+
+  margin-top: 30px;
+
+}
+
+
+/* ================= CARDS ================= */
+
+.about-card {
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+
+  text-align: center;   /* ✅ center text */
+
+}
+
+.about-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+.about-card h3 {
+
+  color: #1e90ff;
+
+  margin-bottom: 10px;
+
+}
+
+
+/* ================= STATS ================= */
+
+.stats-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  gap: 30px;
+
+  margin-top: 30px;
+
+}
+
+.stat-card {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;   /* ✅ perfect center */
+
+  text-align: center;
+
+  padding: 30px;
+
+  background: linear-gradient(135deg, #1e90ff, #0a1f44);
+
+  color: white;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+
+}
+
+.stat-card:hover {
+
+  transform: scale(1.05);
+
+}
+
+.stat-card h3 {
+
+  font-size: 36px;
+
+  margin-bottom: 5px;
+
+}
+
+.stat-card p {
+
+  color: #e0e7ff;
+
+  font-size: 15px;
+
+  margin: 0;
+
+}
+
+
+/* ================= WHY GRID ================= */
+
+.why-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 25px;
+
+  margin-top: 30px;
+
+}
+
+.why-card {
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+
+  text-align: center;   /* ✅ center text */
+
+}
+
+.why-card:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+.why-card h3 {
+
+  color: #1e90ff;
+
+  margin-bottom: 10px;
+
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+.fade-up {
+
+  animation: fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+  }
+
+  to {
+
+    opacity: 1;
+
+  }
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .about-hero h1 {
+
+    font-size: 30px;
+
+  }
+
+  .about-content h2 {
+
+    font-size: 26px;
+
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .about-hero {
+
+    padding: 80px 15px;
+
+  }
+
+  .about-content {
+
+    padding: 60px 15px;
+
+  }
+
+}
