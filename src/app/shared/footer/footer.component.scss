@@ -1,56 +1,223 @@
+/* ================= FOOTER ================= */
+
 .footer {
-  background-color: #111827;
+
+  background: linear-gradient(135deg, #0a1f44, #020817);
+
   color: #fff;
-  padding-top: 50px;
+
+  padding-top: 60px;
+
+  margin-top: 0px;
+
 }
+
+
+/* Container */
 
 .footer-container {
-  width: 85%;
+
+  width: 90%;
+
   margin: auto;
-  display: flex;
-  justify-content: space-between;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
   gap: 40px;
-  flex-wrap: wrap;
+
   padding-bottom: 40px;
+
+  text-align: center;
+
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 220px;
-}
 
-.footer-section h3,
-.footer-section h4 {
+/* Section */
+
+.footer-section h3 {
+
+  font-size: 22px;
+
   margin-bottom: 15px;
+
 }
+
+.footer-section h4 {
+
+  font-size: 18px;
+
+  margin-bottom: 15px;
+
+  color: #1e90ff;
+
+}
+
 
 .footer-section p {
-  margin-bottom: 8px;
-  color: #d1d5db;
+
+  color: #cbd5e1;
+
+  line-height: 1.7;
+
+  margin-bottom: 10px;
+
 }
 
+
+/* Links */
+
 .footer-section ul {
+
   list-style: none;
+
   padding: 0;
+
 }
 
 .footer-section ul li {
-  margin-bottom: 8px;
+
+  margin-bottom: 10px;
+
 }
 
 .footer-section ul li a {
+
   text-decoration: none;
-  color: #d1d5db;
+
+  color: #cbd5e1;
+
   transition: 0.3s;
+
+  position: relative;
+
+}
+
+
+/* Hover animation */
+
+.footer-section ul li a::after {
+
+  content: "";
+
+  width: 0%;
+
+  height: 2px;
+
+  background: #1e90ff;
+
+  display: block;
+
+  margin: auto;
+
+  transition: 0.3s;
+
 }
 
 .footer-section ul li a:hover {
-  color: #fff;
+
+  color: #1e90ff;
+
 }
 
+.footer-section ul li a:hover::after {
+
+  width: 100%;
+
+}
+
+
+/* Bottom */
+
 .footer-bottom {
+
+  background: #020617;
+
   text-align: center;
-  padding: 15px;
-  background-color: #0f172a;
+
+  padding: 20px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.footer-bottom p {
+
+  margin: 5px 0;
+
   font-size: 14px;
+
+}
+
+
+.developer {
+
+  color: #1e90ff;
+
+  font-weight: 500;
+
+}
+
+
+/* ================= ANIMATION ================= */
+
+.fade-up {
+
+  animation: fadeUp 1s ease;
+
+}
+
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .footer {
+
+    padding-top: 40px;
+
+  }
+
+  .footer-container {
+
+    gap: 30px;
+
+  }
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+  .footer-container {
+
+    grid-template-columns: 1fr;
+
+  }
+
 }

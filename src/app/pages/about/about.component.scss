@@ -38,6 +38,75 @@
 
 }
 
+/* HERO FLEX LAYOUT */
+
+.hero-flex {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 50px;
+
+  flex-wrap: wrap;
+
+}
+
+
+/* TEXT */
+
+.hero-text {
+
+  flex: 1;
+
+  min-width: 300px;
+
+}
+
+
+/* IMAGE */
+
+.hero-image {
+
+  flex: 1;
+
+  min-width: 250px;
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+
+.hero-image img {
+
+  width: 280px;
+
+  height: 280px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 5px solid white;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+
+  animation: fadeUp 1.2s ease;
+
+  transition: 0.3s;
+
+}
+
+
+.hero-image img:hover {
+
+  transform: scale(1.05);
+
+}
 
 /* ================= MAIN CONTENT ================= */
 

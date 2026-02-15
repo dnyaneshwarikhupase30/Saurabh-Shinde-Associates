@@ -1,0 +1,118 @@
+/* ================= CONTACT STRIP DARK PREMIUM ================= */
+
+.contact-strip {
+
+  margin: 0;
+  padding: 18px 0;
+
+  /* Dark animated gradient */
+  background: linear-gradient(
+    270deg,
+    #020617,
+    #0f172a,
+    #020617
+  );
+
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+
+
+/* SAME WIDTH AS FOOTER */
+.contact-strip-container {
+
+  width: 90%;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  flex-wrap: wrap;
+}
+
+
+/* Contact items */
+
+.contact-item {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: white;
+
+  font-weight: 500;
+
+  padding: 10px 22px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.08);
+
+  transition: all 0.3s ease;
+}
+
+
+/* Hover effect */
+
+.contact-item:hover {
+
+  background: white;
+  color: #020617;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+
+/* Icon animation */
+
+.contact-item i {
+
+  font-size: 18px;
+  animation: iconPulse 2s infinite;
+}
+
+
+/* Gradient animation */
+
+@keyframes gradientMove {
+
+  0% { background-position: 0% 50%; }
+
+  50% { background-position: 100% 50%; }
+
+  100% { background-position: 0% 50%; }
+
+}
+
+
+/* Icon pulse animation */
+
+@keyframes iconPulse {
+
+  0% { transform: scale(1); }
+
+  50% { transform: scale(1.15); }
+
+  100% { transform: scale(1); }
+
+}
+
+
+/* Mobile responsive */
+
+@media (max-width: 768px) {
+
+  .contact-strip-container {
+
+    flex-direction: column;
+    gap: 15px;
+
+  }
+
+}
