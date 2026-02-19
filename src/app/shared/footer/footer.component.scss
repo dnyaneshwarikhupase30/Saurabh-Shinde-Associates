@@ -8,7 +8,7 @@
 
   padding-top: 60px;
 
-  margin-top: 0px;
+  margin-top: 0;
 
 }
 
@@ -34,7 +34,7 @@
 }
 
 
-/* Section */
+/* Section Titles */
 
 .footer-section h3 {
 
@@ -55,6 +55,8 @@
 }
 
 
+/* Text */
+
 .footer-section p {
 
   color: #cbd5e1;
@@ -67,6 +69,25 @@
 
 
 /* Links */
+
+.footer-link {
+
+  color: #cbd5e1;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+
+}
+
+.footer-link:hover {
+
+  color: #1e90ff;
+
+}
+
+
+/* Quick links */
 
 .footer-section ul {
 
@@ -95,7 +116,7 @@
 }
 
 
-/* Hover animation */
+/* Hover underline animation */
 
 .footer-section ul li a::after {
 
@@ -128,7 +149,46 @@
 }
 
 
-/* Bottom */
+/* ================= DISCLAIMER ================= */
+
+.footer-disclaimer {
+
+  width: 90%;
+
+  margin: auto;
+
+  text-align: center;
+
+  padding: 20px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+}
+
+.footer-disclaimer p {
+
+  font-size: 13px;
+
+  color: #9ca3af;
+
+  margin: 6px 0;
+
+  line-height: 1.6;
+
+}
+
+.mutual-fund {
+
+  color: #cbd5e1;
+
+  font-weight: 500;
+
+}
+
+
+/* ================= BOTTOM ================= */
 
 .footer-bottom {
 
@@ -138,25 +198,29 @@
 
   padding: 20px;
 
-  border-top: 1px solid rgba(255,255,255,0.1);
-
 }
-
 
 .footer-bottom p {
 
-  margin: 5px 0;
+  margin: 6px 0;
 
   font-size: 14px;
 
 }
-
 
 .developer {
 
   color: #1e90ff;
 
   font-weight: 500;
+
+  transition: 0.3s;
+
+}
+
+.developer:hover {
+
+  color: #60a5fa;
 
 }
 
@@ -168,7 +232,6 @@
   animation: fadeUp 1s ease;
 
 }
-
 
 @keyframes fadeUp {
 
@@ -203,7 +266,15 @@
 
   .footer-container {
 
+    grid-template-columns: 1fr;
+
     gap: 30px;
+
+  }
+
+  .footer-disclaimer {
+
+    padding: 15px;
 
   }
 
